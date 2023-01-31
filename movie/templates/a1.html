@@ -1,0 +1,152 @@
+<html>
+    <head>
+        <title>Form</title>
+        </head>
+        <body>
+            <h2><center>Account Opening Form</center></h2>
+            <hr>
+            <table>
+                <tr>
+                        <h3>Full name*</h3>
+                        <label for = "pr">Prefix</label><br>
+                        <select id = "pr" required>
+                            <option>Mr. &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</option>
+                            <option>Ms.</option>
+                        </select>
+                </tr>
+                <tr>
+                        <br><br>
+                        <label for = "fname">First Name</label><br>
+                        <input type = "text" id = "fname" required>
+                </tr>
+                <tr>
+                        <br><br>
+                        <label for = "lname">Last Name</label><br>
+                        <input type = "text" id = "lname">
+                </tr>
+                <tr>
+                        <br><br>
+                        <label for = "AT">Account Type* &nbsp</label>
+                        <select id = "AT" required>
+                            <option>Salary </option>
+                            <option>Savings </option>
+                            <option>Current </option>
+                            <option>Recurring </option>
+                            </select>
+                </tr>
+                <tr>
+                    <br><br>
+                    <label for = "Icard">ID Card Number </label><br>
+                    <input type="text" id="Icard" placeholder="ex: 1234567890">
+                </tr>
+                <tr>
+                    <br><br>
+                    <label for = "mname">Mother's Maiden Name*</label><br>
+                    <input type = "text" id = "mname" required>
+                </tr>
+                <tr>
+                    <br><br>
+                    <label for = "sal">Monthly Salary*</label><br>
+                    <input type="number" id="sal" placeholder="USD" required>
+                </tr>
+                <tr>
+                    <br><br>
+                    <table>
+                        <tr>
+                            <td valign="top">
+                                Gender*
+                            </td>
+                            <td>
+                                <input type="radio" name="ans" value="Male">Male</br>
+                                <input type="radio" name = "ans" value="Female">Female
+                            </td>
+                        </tr>
+                    </table>                  
+                </tr>
+                <tr>
+                    <br>
+                    <label for = "DOB">Date of Birth*</label><br>
+                    <input type = "date" id = "DOB" required>
+                </tr>
+                <tr>
+                    <br><br>
+                    <table>
+                        <tr>
+                            <td valign="top">
+                                Marital Status*
+                            </td>
+                            <td>
+                                <input type="radio" name="ans" value="Single">Single</br>
+                                <input type="radio" name = "ans" value="Married">Married</br>
+                                <input type="radio" name = "ans" value="Married">Divorced</br>
+                                <input type="radio" name = "ans" value="Married">Widow(er)
+                            </td>
+                        </tr>
+                        </table>
+                        <tr><br>
+                                <table>
+                                    <tr>
+                                    <td>
+                                        Telephone Number*
+                                    </td>
+                                        <td>
+                                            <input type="number" size="5">
+                                        </td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <font size="2">Area Code</font>
+                                        </td>
+                                        <td>
+                                            <font size="2">Phone Number</font>
+                                        </td>
+                                    </tr>
+                                    <td>
+                                        <input type="radio" name="ph" value="Mobile">Mobile</br>
+                                        <input type="radio" name = "ph" value="Work">Work</br>
+                                        <input type="radio" name = "ph" value="Home">Home</br>
+                                    </td>
+                                </table>
+                        </tr>
+                        <tr>
+                            <br>
+                            <label for = "mail">E-Mail</label><br>
+                            <input type="email" id="mail"><br>
+                            <font size="2">example@example.com</font>
+                        </tr>
+
+                        <tr>
+                            <br><br>
+                            Address*<br><br>
+
+                            <input type="Text"><br>
+                            <font size="2">Street Address</font> <br><br>
+                            <input type="Text"><br>
+                            <font size="2">Street Address Line 2</font> <br><br>
+                            <input type="Text"><br>
+                            <font size="2">City</font> <br><br>
+                            <input type="Text"><br>
+                            <font size="2">State/Province</font> <br><br>
+                            <input type="Text"><br>
+                            <font size="2">Postal/Zip Code</font> <br><br>
+                            <select>
+                                <option selected>India</option>
+                                <option>Argentina</option>
+                                <option>United State of America  </option>
+                                <option>New Zealand</option>
+                                <option>Australia</option>
+                                <option>Canada </option>
+                                    
+                                </select> <br>
+                            <font size="2">Country</font> 
+                        </tr>
+                    </table>   <br><br>
+                    <button type="submit">Submit</button>               
+                </tr>
+                </table>
+                
+        </body>

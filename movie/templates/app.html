@@ -1,0 +1,62 @@
+{% include 'header.html' %}
+<!-- MAKE AN APPOINTMENT -->
+<section id="appointment" data-stellar-background-ratio="3">
+    <div class="container">
+         <div class="row">
+
+              <div class="col-md-6 col-sm-6">
+                   <img src="/static/images/appointment-image.jpg" class="img-responsive" alt="">
+              </div>
+
+              <div class="col-md-6 col-sm-6">
+                   <!-- CONTACT FORM HERE -->
+                   <form id="appointment-form" role="form" method="POST" name="f1">
+                     {% csrf_token %}
+                        <!-- SECTION TITLE -->
+                        <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+                             <h2>Make an appointment</h2>
+                        </div>
+                        <div class="wow fadeInUp" data-wow-delay="0.8s">
+                             <div class="col-md-6 col-sm-6">
+                                  <p style="color:black;"><strong>Name:</strong></p>
+                                  <p style="background-color:#F8F8F8; color:black;">{{user.first_name}} {{user.last_name}}</p>
+
+                             </div>
+
+                             <div class="col-md-6 col-sm-6">
+                                <p style="color:black;"><strong>Email:</strong></p>
+                                <p style="background-color:#F8F8F8; color:black;">{{user.email}}</p>
+                             </div>
+
+                             <div class="col-md-6 col-sm-6">
+                                  <label for="date"><strong>Select Date</strong></label>
+                                  <input type="date" name="date" class="form-control" required oninput="myfunc()">
+                             </div>
+                             <script>
+                                function myfunc()
+                                {
+                                    var d=document.f1.date.value;
+                                    var given=new Date(d)
+                                    var cur=new Date()
+                                    if(given<cur)
+                                    {
+                                        alert('Date must be greater than today!')
+                                        document.f1.date.value=''
+                                    }
+                                }
+                             </script>
+                             {% for i in messages %}
+                               <p class="alert alert-{{i.tags}}">{{i}}</p>
+                             {% endfor%}
+                             <div class="col-md-12 col-sm-12">
+                                  <button type="submit" class="form-control" id="cf-submit" name="submit">Submit Button</button>
+                                  <a href="/Logout/"><button type="button" class="btn btn-danger">Logout</button></a>
+                             </div>
+                        </div>
+                  </form>
+              </div>
+
+         </div>
+    </div>
+</section>
+{% include 'footer.html' %}

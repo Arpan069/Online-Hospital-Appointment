@@ -1,0 +1,25 @@
+{% include 'header.html' %}
+<br>
+<p class="text-center align-center" style="font-size: 20px;">Welcome, {{user.first_name}}</p>
+<table class='table'>
+    <thead>
+        <tr>
+        <th>Doctor Name</th>
+        <th>Specialist</th>
+        <th>Timing</th>
+        <th>Appointment</th>
+        </tr>
+    </thead>
+    <tbody>
+       {% for i in sc %}
+        <tr>
+        <td>{{i.dname}}</td>
+        <td>{{i.specialist}}</td>
+        <td>{{i.time_slot}}</td>
+        <td><a href="/app/{{i.did}}/{{id}}">Make Appointment</a></td>
+        </tr>
+       {% endfor%}
+    </tbody>
+</table>
+<a href="/Logout/"><button type="button" class="btn btn-danger">Logout</button></a>
+{% include 'footer.html' %}   
